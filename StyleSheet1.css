@@ -368,18 +368,13 @@ a:active {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .experience, .experience2, .left-content, .right-content {
-        position: relative; /* Убираем абсолютное позиционирование */
-        transform: none;
+        visibility: hidden;
     }
 
     .image-container {
-        text-align: center; /* Центрируем изображение */
         width:200px;
-    }
-
-    .left-content, .right-content {
-        margin-bottom: 10px;
+        text-align: center; /* Центрируем изображение */
     }
 }
