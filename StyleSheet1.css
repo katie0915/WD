@@ -141,79 +141,7 @@ h4 {
     color: black;
 }
 
-@media (max-width: 768px) { /* Adjust for tablets */
-    .experience-container {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        width: 90%;
-    }
 
-    .experience, .experience2 {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .content-container {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        width: 90%;
-    }
-
-    .left-content, .right-content {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .image-container {
-        width: 200px;
-        height: 200px;
-    }
-
-    h1 {
-        font-size: 1.2em;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    h4 {
-        font-size: 2.5em;
-    }
-
-    .experience, .experience2 {
-        font-size: 1.2em;
-    }
-
-    .left-content, .right-content {
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 500px) { /* Adjust for smaller phones */
-    .image-container {
-        width: 150px;
-        height: 150px;
-    }
-
-    h1 {
-        font-size: 1em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h4 {
-        font-size: 2em;
-    }
-
-    .experience, .experience2 {
-        font-size: 1em;
-    }
-
-    .left-content, .right-content {
-        font-size: 0.8em;
-    }
-}
 
 .bottom-content {
     background-color: #1A120B;
@@ -440,3 +368,17 @@ a:active {
 }
 
 
+@media (max-width: 768px) {
+    .experience, .experience2, .left-content, .right-content {
+        position: relative; /* Убираем абсолютное позиционирование */
+        transform: none;
+    }
+
+    .image-container {
+        text-align: center; /* Центрируем изображение */
+    }
+
+    .left-content, .right-content {
+        margin-bottom: 10px;
+    }
+}
