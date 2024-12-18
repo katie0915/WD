@@ -368,7 +368,7 @@ a:active {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .experience, .experience2, .left-content, .right-content {
         position: relative; /* Убираем абсолютное позиционирование */
         transform: none;
