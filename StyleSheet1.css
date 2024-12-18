@@ -314,58 +314,63 @@ a:active {
 
 .technology-grid {
     display: grid;
-    grid-template-columns: repeat(4, 400px);
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Key change: auto-fit */
+    grid-gap: 10px; /* Reduced gap for smaller screens */
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 50px; /* Reduced padding */
 }
 
 .technology-card {
     background-color: #f2f2f2;
-    border-radius: 20px;
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
-    padding: 20px;
+    border-radius: 15px; /* Slightly smaller radius */
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* Reduced shadow */
+    padding: 15px; /* Reduced padding */
     text-align: left;
     color: black;
 }
 
-    .technology-card img 
-    {
-        width: 100px;
-        height: 100px;
-      /*  margin-right: 10px; */
-        vertical-align: middle; 
+    .technology-card img {
+        width: 80px; /* Smaller image */
+        height: 80px;
+        vertical-align: middle;
     }
-
-
-/* Медиа-запрос для мобильных устройств */
-@media (max-width: 768px) {
-    .technology-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Уменьшение ширины карточек */
-    }
-}
-
-@media (max-width: 500px) {
-    .technology-grid {
-        grid-template-columns: 1fr; /* Одна карточка в строке */
-    }
-}
-
 
 .technology-grid h5 {
     margin-top: 0;
     color: black;
-    font-size: 68px;
+    font-size: 32px; /* Significantly smaller font size */
     font-family: "Cormorant Unicase", serif;
     text-align: center;
     text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
     text-decoration-color: white;
+    left: 0; /* Removed left offset */
     position: relative;
-    top: 30px;
-    left: 200px;
+    padding-bottom: 20px; /* Added for better spacing */
 }
+
+
+/* Optional Media Query for even smaller screens */
+@media (max-width: 350px) {
+    .technology-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-gap: 5px;
+        padding-top: 20px;
+    }
+
+    .technology-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .technology-grid h5 {
+        font-size: 24px;
+    }
+}
+
+
+
 
 
 @media (max-width: 768px) {
