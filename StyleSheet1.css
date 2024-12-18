@@ -376,6 +376,7 @@ a:active {
 
     .image-container {
         text-align: center; /* Центрируем изображение */
+        width:200px;
     }
 
     .left-content, .right-content {
