@@ -8,23 +8,54 @@
     font-family: "Cormorant Unicase", serif;
 }
 
-.topnav a {
-    display: inline-block; 
-    color: #f2f2f2;    
-    text-align: center;
-    padding: 25px 25px;
-    text-decoration: none;
-    font-size: 23px;    
-}    
+    .topnav a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 25px 25px;
+        text-decoration: none;
+        font-size: 23px;
+    }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #ddd;
+            color: black;
+        }
+
+    .topnav .icon {
+        display: none;
+    }
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        display: inline-block;
+    }
 }
 
-.topnav a.active {
-    background-color: #ddd;
-    color: black;
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            display: block;
+            text-align: left;
+        }
 }
 
 /*ПЕРВАЯ СТРАНИЦА*/
@@ -66,8 +97,8 @@
 }
 
 .osn h2 {
+    margin: 20px 0 0 0;
     text-align: center;
-    margin-top: 30px;
     font-size: 3em;
     color: #f2f2f2;
     font-family: "Cormorant Unicase", serif;
@@ -75,12 +106,13 @@
 
 .osn h4 {
     text-align: center;
-    font-size: 4em;
+    font-size: 5em;
     color: white;
     text-shadow: 3px 4px 2px black;
     font-family: "Playfair", serif;
     align-items: flex-start;
     margin-top: 0;
+    margin:0;
 }
 
 .experience {
@@ -145,22 +177,28 @@
     background-color: #02011c;
     text-align: center;
     margin: 0;
-    padding: 25px 25px;
+    padding: 10px 15px;
     font-family: "Cormorant Unicase", serif;
     font-size: 20px;
     color: #f2f2f2;
 }
 
-a:link {
-    color: #f2f2f2;
-    text-decoration: none;
+.button {
+    display: inline-block;
+    background-color: #030032; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    text-align: center;
+    padding: 15px 25px; /* Отступы внутри кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 20px; /* Размер шрифта */
+    border-radius: 10px; /* Скругленные углы */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход при наведении */
 }
-a:hover {
-    text-decoration: underline;
-}
-a:active {
-    color: dimgrey;
-}
+
+    .button:hover {
+        background-color: #ddd; /* Цвет фона при наведении */
+        color: black; /* Цвет текста при наведении */
+    }
 
 .okno1 {
     display: none;
@@ -208,7 +246,7 @@ a:active {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 100px 0 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,10 +266,6 @@ a:active {
         margin: 0;
         font-size: 24px;
         font-family: "Cormorant Unicase", serif;
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
-        text-decoration-color: white;
     }
 
 .achievements {
@@ -247,7 +281,7 @@ a:active {
     width: calc(33.33% - 20px); /* Три карточки в ряд с учетом отступов */
     margin: 10px;
     border-color: black;
-    border-radius: 55px; /* Уменьшение радиуса для компактности */
+    border-radius: 30px; /* Уменьшение радиуса для компактности */
     overflow: hidden;
     background-color: #f2f2f2;
     box-shadow: 2px 2px 4px black; /* Уменьшение теней для компактности */
@@ -300,7 +334,7 @@ a:active {
     height: 800px;
     min-height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 100px 0 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,10 +354,6 @@ a:active {
         margin: 0;
         font-size: 24px;
         font-family: "Cormorant Unicase", serif;
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
-        text-decoration-color: white;
     }
 
 
@@ -354,52 +384,344 @@ a:active {
         display: block;
     }
 
-/*.technology-grid h5 {
-    margin: 0 0 40px 0;
-    color: black;
-    font-size: 24px;
-    font-family: "Cormorant Unicase", serif;
+
+/*ФОРМА*/
+
+.contact {
+    background: -webkit-linear-gradient(90deg, #000000,#030032);
+    background: linear-gradient(90deg, #000000,#030032);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 100px 0 150px 0;
+}
+.contact-form {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+    .contact-form h2 {
+        text-align: center;
+        font-family: "Cormorant Unicase", serif;
+        color: #030032;
+    }
+
+    .contact-form label {
+        display: block;
+        margin: 10px 0 5px;
+        font-family: "Cormorant Unicase", serif;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 97%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    .contact-form button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #030032;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-family: "Cormorant Unicase", serif;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+
+
+/* ФУТЕР */
+
+.footer {
+    background: #030032;
+    color: #f2f2f2;
+    padding: 30px 0;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-    text-decoration-color: white;
-    padding-bottom: 20px;
-    grid-column: 1 / 3;*/ /* Заголовок занимает всю ширину сетки */
-    /*grid-row: 0;
-    background-color: #030032;
-    color: white;
-    padding: 10px 0;
-    border-radius: 15px 15px 0 0;
-}*/
+}
 
+    .footer .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
 
-
-/* Optional Media Query for even smaller screens */
-@media (max-width: 350px) {
-    .technology-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-        grid-gap: 5px;
-        padding-top: 20px;
+        position: relative;
     }
 
-    .technology-card img {
-        width: 60px;
-        height: 60px;
+    .footer .footer-section {
+        flex: 1;
+        min-width: 280px;
+        margin: 20px;
+        font-family: "Cormorant Unicase", serif;
+        
+        position: relative;
     }
 
-    .technology-grid h5 {
+        .footer .footer-section::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 10%;
+            bottom: 10%;
+            width: 1px;
+            background: #fff;
+            opacity: 0.5;
+            right: -50px;
+        }
+
+        .footer .footer-section:last-child::after {
+            display: none; 
+        }
+
+    .footer .logo-text {
         font-size: 24px;
+        font-family: "Cormorant Unicase", serif;
+        font-weight: bold;
+    }
+
+    .footer .contact span {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .footer .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        color: #f2f2f2;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+        .footer .social-links a:hover {
+            color: #ddd;
+        }
+
+.footer-bottom {
+    background: #02011c;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
+
+
+
+/* Адаптивность ПЕРВАЯ СТРАНИЦА */ 
+@media screen and (max-width: 770px)
+{
+    .osn {
+        min-height: 130vh; /* Полная высота экрана */
+    }
+
+    .image-container img {
+        width: 60%; /* Уменьшение размера изображения */
+        top: 34%;
+    }
+
+    .osn h1 {
+        font-size: 1.2em; /* Уменьшение размера шрифта */
+    }
+
+    .osn h2 {
+        font-size: 2em; /* Уменьшение размера шрифта */
+        margin: 10px 0 0 0; /* Корректировка отступов */
+    }
+
+    .osn h4 {
+        font-size: 3em; /* Уменьшение размера шрифта */
+        margin: 5px 0; /* Корректировка отступов */
+    }
+
+    .experience {
+        top: 55%; /* Корректировка положения */
+        left: 28%; /* Центрирование */
+        transform: translate(-50%, -50%);
+        font-size: 2.5em; /* Уменьшение размера шрифта */
+        width: 27%; /* Расширение */
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .experience2 {
+        top: 55%; /* Корректировка положения */
+        left: 70%; /* Центрирование */
+        transform: translate(-50%, -50%);
+        font-size: 2.5em; /* Уменьшение размера шрифта */
+        width: 27%; /* Расширение */
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .left-content {
+        width: 75%; /* Расширение */
+        top: 68%; /* Корректировка положения */
+        left: 50%; /* Центрирование */
+        transform: translate(-50%, -50%);
+        font-size: 1em; /* Уменьшение размера шрифта */
+    }
+
+    .right-content {
+        width: 75%; /* Расширение */
+        top: 86%; /* Корректировка положения */
+        left: 50%; /* Центрирование */
+        transform: translate(-50%, -50%);
+        font-size: 1em; /* Уменьшение размера шрифта */
+    }
+
+    .okno1, .okno2 {
+        width: 80%; /* Расширение */
+        left: 50%; /* Центрирование */
+        transform: translate(-50%, -50%);
+    }
+
+    .button {
+        width: 80%; /* Увеличение кнопки */
+        padding: 10px 0; /* Корректировка отступов */
     }
 }
 
-@media (max-width: 768px) {
-    .experience, .experience2, .left-content, .right-content {
-        visibility: hidden;
+@media screen and (max-width: 480px) {
+    .osn h2 {
+        font-size: 1.5em; /* Еще большее уменьшение размера шрифта */
     }
 
-    .image-container {
-        width:200px;
-        text-align: center; /* Центрируем изображение */
+    .osn h4 {
+        font-size: 2em; /* Еще большее уменьшение размера шрифта */
     }
+
+    .experience, .experience2 {
+        font-size: 0.8em; /* Еще большее уменьшение размера шрифта */
+    }
+
+    .left-content, .right-content {
+        font-size: 0.8em; /* Еще большее уменьшение размера шрифта */
+    }
+
+    .okno1, .okno2 {
+        font-size: 0.8em; /* Еще большее уменьшение размера шрифта */
+        position: fixed; /* Изменено на fixed для центрирования */
+        top: 50%;
+    }
+
+    .button {
+        font-size: 0.8em; /* Еще большее уменьшение размера шрифта */
+    }
+}
+
+
+
+/* Адаптивность ВТОРАЯ СТРАНИЦА */
+
+@media screen and (max-width: 768px) {
+    .titlee h5 {
+        font-size: 20px; /* Уменьшение размера шрифта */
+    }
+
+    .achievements {
+        width: 90%; /* Расширение контейнера */
+        padding-top:20px;
+    }
+
+    .achievement {
+        width: 100%; /* Одна карточка в ряд */
+        max-width: 300px; /* Ограничение максимальной ширины карточки */
+    }
+
+    .description h3 {
+        font-size: 16px; /* Уменьшение размера шрифта */
+    }
+
+    .description p {
+        font-size: 10px; /* Уменьшение размера шрифта */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titlee h5 {
+        font-size: 18px; /* Еще большее уменьшение размера шрифта */
+    }
+
+    .achievements {
+        width: 100%; /* Расширение контейнера */
+    }
+
+    .achievement {
+        width: 100%; /* Одна карточка в ряд */
+        max-width: 280px; /* Ограничение максимальной ширины карточки */
+    }
+
+    .description h3 {
+        font-size: 14px; /* Еще большее уменьшение размера шрифта */
+    }
+
+    .description p {
+        font-size: 8px; /* Еще большее уменьшение размера шрифта */
+    }
+}
+
+/* Адаптивность ТРЕТЬЯ СТРАНИЦА */ 
+
+@media screen and (max-width: 760px) 
+{
+    .sec3 {
+        min-height: 150vh; /* Полная высота экрана */
+    }
+
+    .technology-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .technology-grid {
+        grid-template-columns: 1fr; /* Одна колонка */
+    }
+    .sec3 {
+        min-height: 350vh; /* Полная высота экрана */
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 375px) {
+    .technology-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    }
+
+    .technology-card {
+        padding: 5px; /* Уменьшение внутренних отступов */
+    }
+
+        .technology-card img {
+            width: 40px; /* Уменьшение размера изображений */
+            height: 50px; /* Уменьшение размера изображений */
+        }
+
+        .technology-card h3 {
+            font-size: 0.8em; /* Уменьшение размера заголовка */
+        }
+
+        .technology-card p {
+            font-size: 0.7em; /* Уменьшение размера текста */
+        }
 }

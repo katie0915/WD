@@ -13,14 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="topnav">
-        <a class="active" href="#main">Главная</a>
+
+    <div class="topnav" id="myTopnav">
+        <a href="#active" class="active">Главная</a>
         <a href="#portfolio">Портфолио</a>
         <a href="#tech">Технологии</a>
-        <a href="#about">Обо мне</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
     </div>
 
     <div class=" osn">
@@ -58,17 +59,16 @@
 
 
         <p class=" left-content">Я предлагаю <b>индивидуальный подход</b> к каждому проекту. Создаю сайты и веб-приложения, которые отражают ваш <b>стиль</b> и помогают <b>добиться успеха</b>.</p>
-        <p class=" right-content"><b>Работаю с:</b><br />HTML<br />CSS<br />Java Script<br />Figma<br />Photoshop</p>
+        <p class=" right-content"><b>Работаю с:</b><br />HTML<br />CSS<br />Java Script<br />Figma<br />Tilda<br />Photoshop</p>
 
     </div>
 
-    <div class=" bottom-content">
-        <p><a href="mailto:katytara2004@gmail.com">Связаться со мной</a></p>
+    <div class="bottom-content">
+        <p><a href="#about" class="button">Связаться со мной</a></p>
     </div>
 
     <section id="portfolio">
         <div class="ach">
-            <br /> <br /> <br /> <br />
             <div class="titlee">
                 <h5>Опыт и успехи</h5>
             </div>
@@ -82,21 +82,20 @@
                     </div>
                 </div>
                 <div class="achievement">
-                    <img src="shop.png" alt="Достижение 3">
+                    <img src="how-web-designers-are-using-ai-to-improve-their-work.jpeg" alt="Достижение 3">
                     <div class="description">
-                        <h3>Разработка  сайта  для крупного интернет-магазина</h3>
-                        <p>Я  разработала  сайт  интернет-магазина одежды Edelweiss. Сайт  отличается  современным  и  стильным  дизайном,  удобной  навигацией,  подробным  описанием  товаров  и  интеграцией  с  системой  онлайн-оплаты.  Это  позволило  увеличить  конверсию  сайта  на  15%  и  значительно повысить  узнаваемость  бренда.</p>
+                        <h3>Разработка и внедрение уникальных дизайнов для более чем 20 веб-проектов</h3>
+                        <p>Создала и внедрила уникальные дизайны, обеспечивая адаптивность, оптимизированный UX/UI и успешное взаимодействие с клиентами, используя современные инструменты для достижения наилучших результатов.</p>
                     </div>
                 </div>
                 <div class="achievement">
-                    <img src="ed.jpg" alt="Достижение 4">
+                    <img src="45b9a2aef45dd75fb68ab64ddbee1f59_original.125980.jpg" alt="Достижение 4">
                     <div class="description">
-                        <h3>Создание  платформы  для  онлайн-обучения</h3>
-                        <p>Я создала платформу  для  онлайн-обучения,  которая  позволяет  пользователям  проходить  курсы,  взаимодействовать  с  преподавателями и отслеживать  свой  прогресс.  Платформа  отличается  интуитивным  интерфейсом,  удобной  системой  управления  контентом  и  мощными  возможностями  аналитики.</p>
+                        <h3>Проведение тренингов, лекций и участие в международных конференциях</h3>
+                        <p>Мною было проведено множество тренингов и лекциий по веб-дизайну, а также я поучаствовала в международных конференциях, делясь своим опытом и знаниями с широкой аудиторией. Эти мероприятия способствовали развитию профессиональных навыков в отрасли.</p>
                     </div>
                 </div>
             </div>
-            <br /><br /><br /><br /><br />
         </div>
     </section>
 
@@ -108,40 +107,91 @@
             </div>
             <div class="technology-grid">
                 <div class="technology-card">
-                    <img src="image1.jpeg" alt="HTML">
                     <h3>HTML5</h3>
+                    <i class="fab fa-html5 fa-5x" style="color: #06014a; "></i>
                     <p>Глубокое понимание HTML5, включая семантическую разметку, работу с формами, API и веб-компонентами.  Опыт разработки сложных веб-страниц и веб-приложений.</p>
                 </div>
                 <div class="technology-card">
-                    <img src="images.png" alt="CSS">
                     <h3>CSS3</h3>
+                    <i class="fab fa-css3-alt fa-5x" style="color: #06014a; "></i>
                     <p>Широкое владение CSS3, включая использование Flexbox, Grid, анимации, препроцессоров (Sass/Less) и методологий (BEM, OOCSS).  Опыт создания адаптивных и responsive дизайнов.</p>
                 </div>
                 <div class="technology-card">
-                    <img src="Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript">
                     <h3>JavaScript (ES6+)</h3>
+                    <i class="fab fa-js fa-5x" style="color: #06014a; "></i>
                     <p>Опыт работы с современным JavaScript, включая ES6+,  асинхронное программирование (async/await, promises),  DOM manipulation,  работу с различными библиотеками и фреймворками (указать конкретные).</p>
                 </div>
                 <div class="technology-card">
-                    <img src="React_Logo_SVG.svg.png" alt="React">
-                    <h3>React</h3>
+                    <h3>Figma</h3>
+                    <i class="fab fa-figma fa-5x" style="color: #06014a; "></i>
                     <p>Опыт разработки React-приложений, включая работу с компонентами, state, props, hooks,  использование Redux (или альтернативных решений для управления состоянием),  тестирование компонентов.</p>
                 </div>
                 <div class="technology-card">
-                    <img src="pluginIcon.png" alt="Node.js">
-                    <h3>Node.js</h3>
+                    <h3>Tilda</h3>
+                    <i class="far fa-window-restore fa-5x" style="color: #06014a; "></i>
                     <p>Опыт работы с Node.js, включая создание серверных приложений, использование различных модулей и пакетов npm,  работу с базами данных.</p>
                 </div>
                 <div class="technology-card">
-                    <img src="10108220.png" alt="Responsive Web Design">
-                    <h3>Адаптивный веб-дизайн</h3>
+                    <h3>Photoshop</h3>
+                    <i class="far fa-image fa-5x" style="color: #06014a; "></i>
                     <p>Опыт создания веб-сайтов, которые отлично отображаются на устройствах с различными размерами экранов (десктопы, планшеты, мобильные телефоны). Знание различных техник адаптивной верстки (медиа-запросы, Flexbox, Grid).</p>
                 </div>
-                <br /><br />
             </div>
         </div>
     </section>
 
+    <section id="about">
+        <div class="contact">
+            <div class="contact-form">
+                <h2>Связаться со мной</h2>
+                <form action="https://getform.io/f/blllnypb" method="POST">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
 
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2 class="logo-text">Екатерина Тарасенко <i class="fas fa-cat fa-2x"></i></h2>
+                <!--<p>Описание вашего сайта или компании. Здесь вы можете рассказать немного о себе.</p>-->
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; +375(29)510-24-83</span>
+                    <span><i class="fas fa-envelope"></i> &nbsp; katytara2004@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="footer-section social">
+                <br>
+                <h2>Социальные сети</h2>
+                <br>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/katie_9_15?igsh=MTMyMHVyd2gyZmxrbQ=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://vk.com/katie_9_15"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-viber"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2024 Екатерина Тарасенко
+            <br> <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a>
+        </div>
+    </footer>
+
+
+    <script src="JavaScript.js"></script>
+    <script src="newFile.js"></script>
 </body>
 </html>
