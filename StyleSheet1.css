@@ -80,10 +80,12 @@
         border-width: 3px;
         box-shadow: 4px 4px 5px black;
         margin-top: 0;
-        position: absolute;
-        top: 65%;
+        position: relative;
+        top: 27vh;
         left: 50%;
         transform: translate(-50%, -50%);
+        width:45%;
+        max-width:50%;
     }
 
     .osn h1 {
@@ -529,64 +531,75 @@
 
     /* Адаптивность ПЕРВАЯ СТРАНИЦА */
 
-@media screen and (max-width: 480px) and (min-width: 320px) {
-    
-    .osn {
-        min-height: 150vh;
-    }
-    
-    .osn h2 {
-        font-size: 1.5em; /* Еще большее уменьшение размера шрифта */
-        }
-
-    .osn h4 {
-        font-size: 2em; /* Еще большее уменьшение размера шрифта */
-        }
-
+@media screen and (max-width: 600px) {
     .image-container img {
-        width: 60%;
-        top:35%;
-        }
-
-    .experience {
-        font-size: 1em; /* Еще большее уменьшение размера шрифта */
-        left: 25%;
-        top: 53%;
-        width: 30%;
-    }
-
-    .experience2 {
-        font-size: 1em; /* Еще большее уменьшение размера шрифта */
-        left: 70%;
-        top: 53%;
-        width: 30%;
-    }
-
-    .left-content {
-        width: 75%;
-        top: 68%; 
-        left: 50%; 
-        transform: translate(-50%, -50%);
-        font-size: 1em;  
-        }
-
-    .right-content {
-        width: 75%;
-        top: 86%;
-        left: 50%;
-        font-size: 1em;
-    }
-
-    .okno1, .okno2 {
-        font-size: 0.8em; /* Еще большее уменьшение размера шрифта 
-        position: fixed; /* Изменено на fixed для центрирования */
-        top: 50%;
-    }
-
-    .button {
-        font-size: 0.8em; /* Еще большее уменьшение размера шрифта */
+        max-width: 50%;
+        width:40%;
     }
 }
+
+
+    @media screen and (max-width: 1024px) {
+
+        .osn {
+            min-height: 190vh;
+        }
+
+            .osn h2 {
+                font-size: 2.5em; /* Еще большее уменьшение размера шрифта */
+            }
+
+            .osn h4 {
+                font-size: 3em; /* Еще большее уменьшение размера шрифта */
+            }
+
+        .image-container img 
+        {
+            position:relative;
+            max-width:80%;
+            width:70%;
+            top:40vh;
+        }
+
+        .experience {
+            font-size: 1em; /* Еще большее уменьшение размера шрифта */
+            left: 27%;
+            top: 60%;
+            width: 30%;
+        }
+
+        .experience2 {
+            font-size: 1em; /* Еще большее уменьшение размера шрифта */
+            left: 72%;
+            top: 60%;
+            width: 30%;
+        }
+
+        .left-content {
+            width: 75%;
+            top: 68%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1em;
+        }
+
+        .right-content {
+            width: 75%;
+            top: 80%;
+            left: 50%;
+            font-size: 1em;
+        }
+
+        .okno1, .okno2 {
+            font-size: 0.8em; /* Еще большее уменьшение размера шрифта 
+        position: fixed; /* Изменено на fixed для центрирования */
+            top: 50%;
+        }
+
+        .button {
+            font-size: 0.8em; /* Еще большее уменьшение размера шрифта */
+        }
+    }
 
     /*@media screen and (max-width: 941px) {
         .osn {
@@ -600,101 +613,101 @@
 
         .experience {
             top: 55%;*/ /* Корректировка положения */
-            /*left: 10%;*/ /* Центрирование */
-            /*cursor: pointer;
+    /*left: 10%;*/ /* Центрирование */
+    /*cursor: pointer;
         }
 
         .experience2 {
             top: 55%;*/ /* Корректировка положения */
-            /*left: 80%;*/ /* Центрирование */
-            /*cursor: pointer;
+    /*left: 80%;*/ /* Центрирование */
+    /*cursor: pointer;
         }
 
         .left-content {
             width: 75%;*/ /* Расширение */
-            /*top: 68%;*/ /* Корректировка положения */
-            /*left: 50%;*/ /* Центрирование */
-            /*transform: translate(-50%, -50%);
+    /*top: 68%;*/ /* Корректировка положения */
+    /*left: 50%;*/ /* Центрирование */
+    /*transform: translate(-50%, -50%);
             font-size: 1em;*/ /* Уменьшение размера шрифта */
-        /*}
+    /*}
 
         .right-content {
             width: 75%;*/ /* Расширение */
-            /*top: 86%;*/ /* Корректировка положения */
-            /*left: 50%;*/ /* Центрирование */
-        /*}
+    /*top: 86%;*/ /* Корректировка положения */
+    /*left: 50%;*/ /* Центрирование */
+    /*}
     }
 
     @media screen and (max-width: 770px) {
         .osn {
             min-height: 130vh;*/ /* Полная высота экрана */
-        /*}
+    /*}
 
         .image-container img {
             width: 60%;*/ /* Уменьшение размера изображения */
-            /*top: 34%;
+    /*top: 34%;
         }
 
         .osn h1 {
             font-size: 1.2em;*/ /* Уменьшение размера шрифта */
-        /*}
+    /*}
 
         .osn h2 {
             font-size: 2em;*/ /* Уменьшение размера шрифта */
-            /*margin: 10px 0 0 0;*/ /* Корректировка отступов */
-        /*}
+    /*margin: 10px 0 0 0;*/ /* Корректировка отступов */
+    /*}
 
         .osn h4 {
             font-size: 3em;*/ /* Уменьшение размера шрифта */
-            /*margin: 5px 0;*/ /* Корректировка отступов */
-        /*}
+    /*margin: 5px 0;*/ /* Корректировка отступов */
+    /*}
 
         .experience {
             top: 55%;*/ /* Корректировка положения */
-            /*left: 28%;*/ /* Центрирование */
-            /*transform: translate(-50%, -50%);
+    /*left: 28%;*/ /* Центрирование */
+    /*transform: translate(-50%, -50%);
             font-size: 2.5em;*/ /* Уменьшение размера шрифта */
-            /*width: 27%;*/ /* Расширение */
-            /*text-align: center;
+    /*width: 27%;*/ /* Расширение */
+    /*text-align: center;
             cursor: pointer;
         }
 
         .experience2 {
             top: 55%;*/ /* Корректировка положения */
-            /*left: 70%;*/ /* Центрирование */
-            /*transform: translate(-50%, -50%);
+    /*left: 70%;*/ /* Центрирование */
+    /*transform: translate(-50%, -50%);
             font-size: 2.5em;*/ /* Уменьшение размера шрифта */
-            /*width: 27%;*/ /* Расширение */
-            /*text-align: center;
+    /*width: 27%;*/ /* Расширение */
+    /*text-align: center;
             cursor: pointer;
         }
 
         .left-content {
             width: 75%;*/ /* Расширение */
-            /*top: 68%;*/ /* Корректировка положения */
-            /*left: 50%;*/ /* Центрирование */
-            /*transform: translate(-50%, -50%);
+    /*top: 68%;*/ /* Корректировка положения */
+    /*left: 50%;*/ /* Центрирование */
+    /*transform: translate(-50%, -50%);
             font-size: 1em;*/ /* Уменьшение размера шрифта */
-        /*}
+    /*}
 
         .right-content {
             width: 75%;*/ /* Расширение */
-            /*top: 86%;*/ /* Корректировка положения */
-            /*left: 50%;*/ /* Центрирование */
-            /*transform: translate(-50%, -50%);
+    /*top: 86%;*/ /* Корректировка положения */
+    /*left: 50%;*/ /* Центрирование */
+    /*transform: translate(-50%, -50%);
             font-size: 1em;*/ /* Уменьшение размера шрифта */
-        /*}
+    /*}
 
         .okno1, .okno2 {
             width: 80%;*/ /* Расширение */
-            /*left: 50%;*/ /* Центрирование */
-            /*transform: translate(-50%, -50%);
+    /*left: 50%;*/ /* Центрирование */
+    /*transform: translate(-50%, -50%);
         }
 
         .button {
             width: 80%;*/ /* Увеличение кнопки */
-            /*padding: 10px 0;*/ /* Корректировка отступов */
-        /*}
+    /*padding: 10px 0;*/ /* Корректировка отступов */
+    /*}
     }*/
 
 
